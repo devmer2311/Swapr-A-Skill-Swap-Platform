@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               {navigation.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => onPageChange(item.id)}
+                  onClick={() => onPageChange(item.id as Page)}
                   className={`group relative px-6 py-3 rounded-2xl text-sm font-bold transition-all duration-300 transform hover:scale-105 ${
                     currentPage === item.id
                       ? `text-white bg-gradient-to-r ${item.gradient} shadow-xl animate-pulse-glow`
