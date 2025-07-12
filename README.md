@@ -1,6 +1,6 @@
 # 🔁 Swapr – A Skill Swap Platform
 
-### 👥 Team Name: 0xBinary  
+### 👥 Team Name: Team 2298 
 ### 📧 TL's Email: devmer2311@gmail.com
 
 ---
