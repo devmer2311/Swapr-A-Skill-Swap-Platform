@@ -6,7 +6,7 @@ import type { Page } from '../../App';
 
 
 interface AdminDashboardProps {
-  onPageChange: (page: page) => void;
+  onPageChange: (page: Page) => void;
 }
 
 const AdminDashboard: React.FC<AdminDashboardProps> = ({ onPageChange }) => {
