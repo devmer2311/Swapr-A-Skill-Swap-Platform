@@ -151,7 +151,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ onGetStarted }) => {
           <div className="text-center mb-20">
             <h2 className="text-5xl sm:text-6xl font-black text-gray-900 mb-6 animate-slide-in-up">
               Why Choose 
-              <span className="gradient-text-rainbow"> SkillSwap?</span>
+              <span className="gradient-text-rainbow"> Swapr?</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-4xl mx-auto animate-slide-in-up delay-200 px-4">
               Experience the future of learning through our revolutionary skill exchange platform

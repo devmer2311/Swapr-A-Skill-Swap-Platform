@@ -1,4 +1,4 @@
-# SkillSwap Platform with MongoDB Integration
+# Swapr Platform with MongoDB Integration
 
 A comprehensive skill exchange platform built with React, Node.js, Express, and MongoDB.
 
@@ -40,7 +40,7 @@ Create a `.env` file in the **root directory** (not in the server folder):
 
 ```env
 # MongoDB Configuration
-MONGODB_URI=mongodb://localhost:27017/skillswap
+MONGODB_URI=mongodb://localhost:27017/Swapr
 JWT_SECRET=your-super-secret-jwt-key-change-this-in-production
 NODE_ENV=development
 
@@ -58,7 +58,7 @@ VITE_API_URL=http://localhost:3001/api
 #### Option A: Local MongoDB
 1. Install MongoDB locally
 2. Start MongoDB service
-3. Use the default URI: `mongodb://localhost:27017/skillswap`
+3. Use the default URI: `mongodb://localhost:27017/Swapr`
 4. The database will be created automatically
 
 #### Option B: MongoDB Atlas (Cloud)
@@ -67,7 +67,7 @@ VITE_API_URL=http://localhost:3001/api
 3. Get your connection string
 4. Replace `MONGODB_URI` in `.env` with your Atlas connection string:
    ```
-   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/skillswap?retryWrites=true&w=majority
+   MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/Swapr?retryWrites=true&w=majority
    ```
 
 #### Option C: MongoDB Docker (Alternative)
@@ -75,13 +75,13 @@ If you prefer using Docker:
 ```bash
 docker run -d -p 27017:27017 --name mongodb mongo:latest
 ```
-Then use: `MONGODB_URI=mongodb://localhost:27017/skillswap`
+Then use: `MONGODB_URI=mongodb://localhost:27017/Swapr`
 
 ### Environment Variables Explained
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/skillswap` |
+| `MONGODB_URI` | MongoDB connection string | `mongodb://localhost:27017/Swapr` |
 | `JWT_SECRET` | Secret key for JWT tokens | `your-super-secret-jwt-key-change-this` |
 | `NODE_ENV` | Environment mode | `development` or `production` |
 | `VITE_API_URL` | Frontend API endpoint | `http://localhost:3001/api` |
@@ -115,7 +115,7 @@ This will start:
 ### 5. Default Admin Account
 
 The system creates a default admin account:
-- Email: admin@skillswap.com
+- Email: admin@Swapr.com
 - Password: admin123
 
 ## API Endpoints

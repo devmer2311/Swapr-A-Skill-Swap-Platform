@@ -39,7 +39,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
             >
               <img
                 src="/logo.png"
-                alt="SkillSwap"
+                alt="Swapr"
                 className="h-8 w-auto sm:h-10 md:h-12 lg:h-14 max-w-[120px] sm:max-w-[150px] md:max-w-[180px] lg:max-w-[200px] object-contain group-hover:scale-110 transition-transform duration-300"
                 onError={(e) => {
                   // Fallback to text if image fails to load
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
               />
               {/* Fallback text (hidden by default, shown if image fails) */}
               <span className="hidden text-xl sm:text-2xl font-black gradient-text-rainbow">
-                SkillSwap
+                Swapr
               </span>
             </button>
           </div>

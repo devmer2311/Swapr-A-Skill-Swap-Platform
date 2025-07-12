@@ -93,7 +93,7 @@ const AdminReportsPage: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `skillswap-report-${dateRange}-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `Swapr-report-${dateRange}-${new Date().toISOString().split('T')[0]}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

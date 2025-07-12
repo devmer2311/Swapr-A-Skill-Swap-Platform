@@ -27,7 +27,7 @@ router.post('/register', async (req, res) => {
       skillsOffered: skillsOffered || [],
       skillsWanted: skillsWanted || [],
       availability: availability || [],
-      isAdmin: email === 'admin@skillswap.com'
+      isAdmin: email === 'admin@Swapr.com'
     });
 
     await user.save();

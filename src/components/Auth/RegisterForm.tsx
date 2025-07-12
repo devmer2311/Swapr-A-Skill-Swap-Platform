@@ -77,7 +77,7 @@ const RegisterForm: React.FC<RegisterFormProps> = ({ onSwitchToLogin }) => {
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 rounded-2xl mb-6 animate-pulse-glow">
               <Heart className="h-10 w-10 text-white animate-float" />
             </div>
-            <h2 className="text-3xl font-black gradient-text-rainbow mb-2">Join SkillSwap!</h2>
+            <h2 className="text-3xl font-black gradient-text-rainbow mb-2">Join Swapr!</h2>
             <p className="text-gray-600 text-lg">Start your amazing skill exchange journey</p>
           </div>
 
