@@ -101,7 +101,7 @@ const AdminDashboard: React.FC<AdminDashboardProps> = ({ onPageChange }) => {
       description: 'View and moderate user accounts',
       icon: Users,
       gradient: 'from-blue-500 to-cyan-500',
-      page: 'admin-users',
+      page: Page,
       emoji: '👥'
     },
     {
