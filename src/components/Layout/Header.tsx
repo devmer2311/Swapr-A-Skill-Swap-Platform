@@ -1,7 +1,8 @@
 'use client'
 
 import React, { useState } from 'react'
-import type { Page } from '@/App'; // adjust path if needed
+import type { Page } from '../../App'; // adjust path as needed
+
 
 import { Menu, X, User, Bell, Search, LogOut, Sparkles, Zap, Heart } from 'lucide-react'
 import Image from 'next/image'
