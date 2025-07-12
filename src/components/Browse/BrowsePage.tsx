@@ -19,6 +19,7 @@ const BrowsePage: React.FC<BrowsePageProps> = ({ onUserSelect }) => {
   const [locationFilter, setLocationFilter] = useState('');
   const [sortBy, setSortBy] = useState<'relevance' | 'rating' | 'newest'>('relevance');
   const [windowWidth, setWindowWidth] = useState<number>(0);
+  const [searchResults, setSearchResults] = useState<any[]>([]);
 
   const { users, searchUsers } = useUsers();
   const { currentUser } = useAuth();
@@ -30,6 +31,22 @@ const BrowsePage: React.FC<BrowsePageProps> = ({ onUserSelect }) => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  useEffect(() => {
+    const fetchSearchResults = async () => {
+      if (searchQuery.trim()) {
+        const results = await searchUsers(
+          searchQuery,
+          skillFilter === 'all' ? undefined : skillFilter
+        );
+        setSearchResults(results);
+      } else {
+        setSearchResults([]);
+      }
+    };
+
+    fetchSearchResults();
+  }, [searchQuery, skillFilter, searchUsers]);
+
   const filteredUsers = useMemo(() => {
     let filtered = users.filter(user =>
       user.id !== currentUser?.id &&
@@ -38,10 +55,6 @@ const BrowsePage: React.FC<BrowsePageProps> = ({ onUserSelect }) => {
     );
 
     if (searchQuery.trim()) {
-      const searchResults = searchUsers(
-        searchQuery,
-        skillFilter === 'all' ? undefined : skillFilter
-      );
       filtered = filtered.filter(user =>
         searchResults.some(result => result.id === user.id)
       );
@@ -80,7 +93,7 @@ const BrowsePage: React.FC<BrowsePageProps> = ({ onUserSelect }) => {
     }
 
     return filtered;
-  }, [users, currentUser, searchQuery, skillFilter, locationFilter, sortBy, searchUsers]);
+  }, [users, currentUser, searchQuery, searchResults, locationFilter, sortBy]);
 
   const popularSkills = [
     { name: 'React.js', count: 45, gradient: 'from-blue-500 to-cyan-500', icon: '⚛️' },
