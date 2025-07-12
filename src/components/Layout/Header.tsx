@@ -211,7 +211,7 @@ const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
                 <button
                   key={item.id}
                   onClick={() => {
-                    onPageChange(item.id)
+                    onPageChange(item.id as Page)
                     setIsMenuOpen(false)
                   }}
                   className={`flex items-center space-x-3 w-full text-left px-4 py-3 rounded-2xl text-base font-bold transition-all duration-300 animate-slide-in-left delay-${index * 100} ${
