@@ -2,7 +2,8 @@ import React from 'react';
 import { Users, ArrowRightLeft, Star, TrendingUp, Activity, Calendar, Zap, Target, Globe, Sparkles } from 'lucide-react';
 import { useSwapRequests, useUsers, useReviews } from '@/hooks/useData';
 import { AdminStats } from '@/types';
-import type { Page } from '@/types';
+import type { Page } from '../../App'; 
+
 
 interface AdminDashboardProps {
   onPageChange: (page: page) => void;
