@@ -58,6 +58,7 @@ class ApiService {
   }
 
   async register(userData: any) {
+    console.log('Registering user with data:', userData);
     const response = await this.request('/auth/register', {
       method: 'POST',
       body: JSON.stringify(userData),
@@ -67,6 +68,7 @@ class ApiService {
       this.setToken(response.token);
     }
     
+    console.log('Registration response:', response);
     return response;
   }
 
@@ -93,6 +95,7 @@ class ApiService {
   }
 
   async updateProfile(userData: any) {
+    console.log('Updating profile with data:', userData);
     return this.request('/users/profile', {
       method: 'PUT',
       body: JSON.stringify(userData),
