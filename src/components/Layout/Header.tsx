@@ -8,7 +8,7 @@ import { useNotifications } from '@/hooks/useData'
 
 interface HeaderProps {
   currentPage: string
-  onPageChange: (page: string) => void
+  onPageChange: (page: Page) => void
 }
 
 const Header: React.FC<HeaderProps> = ({ currentPage, onPageChange }) => {
